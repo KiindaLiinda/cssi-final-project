@@ -2,3 +2,18 @@ html{
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: #efefef;
 }
+
+#main {
+  max-width: 550px;
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+  font-size: 25px;
+}
+#login{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+}
