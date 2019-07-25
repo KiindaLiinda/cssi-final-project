@@ -23,3 +23,4 @@ def add_event(self):
     event_cat = self.request.get('event-cat')
 
 def remove_event(self):
+    pass 

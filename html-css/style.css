@@ -11,7 +11,7 @@ html{
       margin: auto;
       padding: 8px;
   }
-  #login{
+  /* #login{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -23,7 +23,7 @@ html{
     border-color: initial;
     border-image: initial;
     margin: auto;
-  }
+  } */
   #slogan {
       text-align: center;
       font-size: 18px;

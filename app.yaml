@@ -1,15 +1,15 @@
 #Metadata
 runtime: python27
 api_version: 1
-
+threadsafe: true
 #Handlers
 handlers:
 
-- url: ./*
+- url: /.*
   script: main.app
   login: required
 
--url: /scripts
+- url: /scripts
   static_dir: scripts
 
 #Libraries

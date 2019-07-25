@@ -4,15 +4,36 @@
     <meta charset="utf-8">
     <title>Ultimate Life Planner</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
   </head>
   <body>
     <!--Heading-->
     <div class="heading" id= "main">
       <h1>Welcome to the Ultimate Life Planner</h1>
     </div>
-    <div class="login" id="login">
-      <button class="right" style="width: 55px; height: 35px;">Login</button>
+    <div id="my-signin2">
+      <!-- <button class="right" style="width: 55px; height: 35px;">Login</button> -->
     </div>
+    <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <div class="slogan" id="slogan">
       <h1>Oranization Made Simply.</h1>
     </div>
