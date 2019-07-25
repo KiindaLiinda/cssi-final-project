@@ -1,0 +1,11 @@
+html{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #efefef;
+}
+#main {
+  max-width: 550px;
+  text-align: center;
+  margin: auto;
+  padding: 8px;
+  font-size: 15px;
+}
