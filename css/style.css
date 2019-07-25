@@ -2,16 +2,36 @@ html{
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: #efefef;
 }
-
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
   #main {
-      max-width: 550px;
+      /* max-width: 550px; */
       text-align: center;
-      font-size: 25px;
+      font-size: 60px;
       color: rgb(31, 122, 140);
       margin: auto;
-      padding: 8px;
+      padding bottom: : 900px;
+      background-color:	#f7c3d6;
   }
-  /* #login{
+  #my-signin2{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -23,10 +43,10 @@ html{
     border-color: initial;
     border-image: initial;
     margin: auto;
-  } */
+  }
   #slogan {
       text-align: center;
-      font-size: 18px;
+      font-size: 40px;
       color: rgb(95, 158, 160);
       margin: auto;
       padding: 8px;
@@ -40,39 +60,39 @@ html{
   }
   #about h2 {
     color: rgb(112, 128, 144);
-    padding-left: 50px;
+    padding-left: 80px;
     font-size: 24px;
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 #features h1 {
     color: rgb(250, 128, 114);
     padding-left: 80px;
     font-size: 28px;
     margin: auto;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 #features ul {
       color: rgb(112, 128, 144);
-      padding-left: 50px;
+      padding-left: 30px;
       font-size: 24px;
       margin: auto;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
 #features h3 {
     color: rgb(250, 128, 114);
     padding-left: 80px;
     font-size: 28px;
     margin: auto;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 #features h4 {
     color: rgb(112, 128, 144);
-    padding-left: 50px;
+    padding-left: 80px;
     font-size: 24px;
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 /*Add Events Page*/
