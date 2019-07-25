@@ -74,3 +74,30 @@ html{
     margin: auto;
     padding-bottom: 20px;
 }
+
+/*Add Events Page*/
+.event-form{
+  text-align: center;
+}
+input:focus {
+  background-color: #E1E5F2;
+}
+#event-name{
+  height: 30px;
+  width: 150px;
+  font-size: 15px;
+}
+#start-time{
+  height: 30px;
+  width: 260px;
+  font-size: 15px;
+}
+#end-time{
+  height: 30px;
+  width: 260px;
+  font-size: 15px;
+}
+#submit{
+  width: 80px;
+  height: 20px;
+}
