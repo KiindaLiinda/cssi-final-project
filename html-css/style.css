@@ -3,17 +3,74 @@ html{
   background-color: #efefef;
 }
 
-#main {
-  max-width: 550px;
-  text-align: center;
-  margin: auto;
-  padding: 8px;
-  font-size: 25px;
+  #main {
+      max-width: 550px;
+      text-align: center;
+      font-size: 25px;
+      color: rgb(31, 122, 140);
+      margin: auto;
+      padding: 8px;
+  }
+  #login{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 28px;
+    border-width: 25px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: auto;
+  }
+  #slogan {
+      text-align: center;
+      font-size: 18px;
+      color: rgb(95, 158, 160);
+      margin: auto;
+      padding: 8px;
+  }
+  #about h1 {
+      color: rgb(250, 128, 114);
+      padding-left: 80px;
+      font-size: 28px;
+      margin: auto;
+      padding-bottom: 5px;
+  }
+  #about h2 {
+    color: rgb(112, 128, 144);
+    padding-left: 50px;
+    font-size: 24px;
+    margin: auto;
+    padding-bottom: 20px;
 }
-#login{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 14px 28px;
-  font-size: 16px;
+#features h1 {
+    color: rgb(250, 128, 114);
+    padding-left: 80px;
+    font-size: 28px;
+    margin: auto;
+    padding-bottom: 5px;
+}
+
+#features ul {
+      color: rgb(112, 128, 144);
+      padding-left: 50px;
+      font-size: 24px;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+#features h3 {
+    color: rgb(250, 128, 114);
+    padding-left: 80px;
+    font-size: 28px;
+    margin: auto;
+    padding-bottom: 5px;
+}
+#features h4 {
+    color: rgb(112, 128, 144);
+    padding-left: 50px;
+    font-size: 24px;
+    margin: auto;
+    padding-bottom: 20px;
 }
