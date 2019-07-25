@@ -79,6 +79,12 @@ html{
 .event-form{
   text-align: center;
 }
+.header2{
+  background-color: #BFDBF7;
+}
+.event-title{
+  color: rgb(112, 128, 144);
+}
 input:focus {
   background-color: #E1E5F2;
 }
