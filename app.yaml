@@ -3,17 +3,17 @@ application: userapp
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: ye
+threadsafe: true
 
 #Handlers
 handlers:
 
-- url: ./*
+- url: /css
+  static_dir: css
+
+- url: .*
   script: main.app
   login: required
-
-- url: /scripts
-  static_dir: scripts
 
 #Libraries
 libraries:

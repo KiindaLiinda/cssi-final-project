@@ -15,7 +15,7 @@ jinja_current_dir = jinja2.Environment(
 #Homepage Handler
 class HomepageHandler(webapp2.RequestHandler):
     def get(self):
-        start_template = jinja_current_dir.get_template("html-css/index.html")
+        start_template = jinja_current_dir.get_template("html/index.html")
         self.response.write(start_template.render())
 
 #Embedding Google Calendar
@@ -33,6 +33,10 @@ class NewEventHandler(webapp2.RequestHandler):
         calendar_link = calendar_url % ("TestEvent",calendar_start, calendar_end)
         calendar_html = "<html><body><a target='_blank' href='%s'>Test Event Link</a></body></html>"
         self.response.write(calendar_html % calendar_link)
+
+#class AllEventsHandler(webapp2.RequestHandler):
+#    def get(self):
+#        all_events_url: "https://www.googleapis.com/calendar/v3/calendars/calendarId/events"
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
