@@ -2,11 +2,12 @@ import json
 import jinja2
 import datetime
 import os
+import webapp2
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
 #remember, you can get this by searching for jinja2 google app engine
-jinja_current_directory = jinja2.Environment(
+jinja_current_dir = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
@@ -14,11 +15,11 @@ jinja_current_directory = jinja2.Environment(
 #Homepage Handler
 class HomepageHandler(webapp2.RequestHandler):
     def get(self):
-        start_template = jinja_current_dir.get_template("templates/welcome.html")
+        start_template = jinja_current_dir.get_template("html-css/index.html")
         self.response.write(start_template.render())
 
 #Embedding Google Calendar
-class CalendarHandler(webapp2.RequestHandler):
+class NewEventHandler(webapp2.RequestHandler):
     def get(self):
         start_string = self.request.get('starttime')
         start_date = datetime.strptime(start_string, "%Y-%m-%dT%H:%M")
@@ -34,7 +35,6 @@ class CalendarHandler(webapp2.RequestHandler):
         self.response.write(calendar_html % calendar_link)
 
 app = webapp2.WSGIApplication([
-    ('/', FoodHandler),
-    ('/showfavs', ShowFoodHandler),
-    ('/calendar', CalendarHandler),
+    ('/', HomepageHandler),
+    ('/newevent', NewEventHandler),
 ], debug=True)
