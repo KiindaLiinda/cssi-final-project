@@ -47,7 +47,7 @@ class NewEventHandler(webapp2.RequestHandler):
             new_event = Event(name=event_name, start_time=start_utc,
                               end_time=end_utc, owner_id=logged_in_user.user_id())
             new_event.put()
-            calendar_html = "<HTML><BODY><A href='%s' target='_blank'>~View Event~</A></BODY></HTML>"
+            calendar_html = jinja_current_dir.get_template("html/newevent-result.html")
             self.response.write(calendar_html % calendar_link)
         else:
             self.redirect('/newevent')
