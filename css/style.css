@@ -101,6 +101,8 @@ time, mark, audio, video {
 }
 .header2{
   background-color: #BFDBF7;
+  padding-top: 10px;
+  font-size: 30px;
 }
 .event-title{
   color: rgb(112, 128, 144);

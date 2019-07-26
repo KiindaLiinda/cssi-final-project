@@ -15,6 +15,13 @@ handlers:
   script: main.app
   login: required
 
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /bootstrap
+  static_dir: bootstrap
+
 #Libraries
 libraries:
 - name: webapp2
