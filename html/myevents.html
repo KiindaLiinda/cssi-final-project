@@ -6,11 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
-    <h1>My Events</h1>
-    <h2>{{event_title}}<h2>
+    <h1 id="main">My Events</h1>
+    <hr>
+    <h2 class="eventlist">{{event_title}}<h2>
       {% for event in my_events %}
-      <p><strong>{{event.name}}</strong> {{event.start_time.strftime("%B %d, %Y %I:%m %p")}} through {{event.end_time.strftime("%B %d, %Y %I:%m %p")}}
+      <p class="eventlist"><strong>{{event.name}}</strong> {{event.start_time.strftime("%B %d, %Y %I:%m %p")}} through {{event.end_time.strftime("%B %d, %Y %I:%m %p")}}
       {% endfor %}
     <a href="%s"></a>
+    <hr>
+    <br>
+    <button id="redirect2"><a href="/dashboard" id="aredir">Return to Dashboard</a></button>
   </body>
 </html>
