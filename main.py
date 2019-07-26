@@ -22,12 +22,16 @@ class HomepageHandler(webapp2.RequestHandler):
         start_template = jinja_current_dir.get_template("html/index.html")
         self.response.write(start_template.render())
 
-#Embedding Google Calendar
+#Dashboard Handler
+class DashboardHandler(webapp2.RequestHandler):
+    def get(self):
+        start_template = jinja_current_dir.get_template("html/dashboard.html")
+        self.response.write(start_template.render())
+#Creating a new event
 class NewEventHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("html/newevent.html")
         self.response.write(start_template.render())
-
 
     def post(self):
         logged_in_user = users.get_current_user()
@@ -62,6 +66,7 @@ class AllEventsHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
+    ('/dashboard', DashboardHandler),
     ('/newevent', NewEventHandler),
     ('/allevents', AllEventsHandler)
 ], debug=True)
