@@ -144,3 +144,16 @@ input:focus {
   bottom: -215.5px;
   right: 200px;
 }
+#redirect{
+  height: 45px;
+  width: 280px;
+  font-size: 30px;
+  background-color: #353535;
+  text-decoration: none;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+#aredir{
+  text-decoration: none;
+  color: #FFFFFF;
+}
