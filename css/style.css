@@ -127,3 +127,18 @@ input:focus {
   width: 80px;
   height: 20px;
 }
+#img1{
+ position: absolute;
+ bottom: -445px;
+ right: 300px;
+}
+#img2{
+  position: absolute;
+  bottom: -212px;
+  right: 480px;
+}
+#img3{
+  position: absolute;
+  bottom: -215.5px;
+  right: 200px;
+}
