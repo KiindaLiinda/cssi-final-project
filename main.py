@@ -63,10 +63,15 @@ class AllEventsHandler(webapp2.RequestHandler):
        events = Event.query().filter(Event.owner_id == logged_in_user.user_id()).fetch()
        self.response.write(start_template.render({'my_events': events}))
 
+class ComingSoonHandler(webapp2.RequestHandler):
+   def get(self):
+       start_template = jinja_current_dir.get_template("html/comingsoon.html")
+       self.response.write(start_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
     ('/dashboard', DashboardHandler),
     ('/newevent', NewEventHandler),
-    ('/allevents', AllEventsHandler)
+    ('/myevents', AllEventsHandler),
+    ('/comingsoon', ComingSoonHandler),
 ], debug=True)

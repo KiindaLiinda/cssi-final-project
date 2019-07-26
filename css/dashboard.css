@@ -40,3 +40,19 @@ button:hover{
 #chat{
   text-align: center;
 }
+.nodec{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#redirect2{
+  height: 45px;
+  width: 300px;
+  font-size: 30px;
+  background-color: #353535;
+  text-decoration: none;
+  align-items: center;
+}
+#aredir{
+  text-decoration: none;
+  color: #FFFFFF;
+}
