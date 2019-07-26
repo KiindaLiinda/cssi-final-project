@@ -8,6 +8,8 @@ from datetime import datetime
 from datetime import timedelta
 from google.appengine.api import users
 from google.appengine.ext import ndb
+
+from models import Event
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_dir = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -25,7 +27,10 @@ class NewEventHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("html/newevent.html")
         self.response.write(start_template.render())
+
+
     def post(self):
+        logged_in_user = users.get_current_user()
         event_name = self.request.get('event-name')
         start_string = self.request.get('start-time')
         end_string = self.request.get('end-time')
@@ -39,16 +44,24 @@ class NewEventHandler(webapp2.RequestHandler):
             calendar_end = end_utc.strftime("%Y%m%dT%H%M00Z")
 
             calendar_link = calendar_url % (event_name, calendar_start, calendar_end)
+            new_event = Event(name=event_name, start_time=start_utc,
+                              end_time=end_utc, owner_id=logged_in_user.user_id())
+            new_event.put()
             calendar_html = "<HTML><BODY><A href='%s' target='_blank'>~View Event~</A></BODY></HTML>"
             self.response.write(calendar_html % calendar_link)
         else:
             self.redirect('/newevent')
 
-#class AllEventsHandler(webapp2.RequestHandler):
-#    def get(self):
-#        all_events_url: "https://www.googleapis.com/calendar/v3/calendars/calendarId/events"
+class AllEventsHandler(webapp2.RequestHandler):
+   def get(self):
+       start_template = jinja_current_dir.get_template("html/myevents.html")
+       logged_in_user = users.get_current_user()
+       events = Event.query().filter(Event.owner_id == logged_in_user.user_id()).fetch()
+       self.response.write(start_template.render({'my_events': events}))
+
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
     ('/newevent', NewEventHandler),
+    ('/allevents', AllEventsHandler)
 ], debug=True)
