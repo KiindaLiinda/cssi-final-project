@@ -9,18 +9,19 @@
     <h1 id= "main">Ultimate Life Planner</h1>
     <div class="event-form">
       <div class="header2">
-        <hr>
         <h1>Create a New Event</h1>
         <hr>
       </div>
-      <h3 class="event-titles">Name of Event</h3>
-      <input type="text" name="event-name" id="event-name" placeholder="Event Name.." required>
-      <h3 class="event-titles">Start Date and Time</h3>
-      <input type="datetime-local" name="start-time" id="start-time">
-      <h3 class="event-titles">End Date and Time</h3>
-      <input type="datetime-local" name="end-time" id="end-time">
-      <br><br>
-      <input type="submit" value="Submit" id="submit">
+      <form action="/newevent">
+        <h3 class="event-titles">Name of Event</h3>
+        <input type="text" name="event-name" id="event-name" placeholder="Event Name.." required>
+        <h3 class="event-titles">Start Date and Time</h3>
+        <input type="datetime-local" name="start-time" id="start-time">
+        <h3 class="event-titles">End Date and Time</h3>
+        <input type="datetime-local" name="end-time" id="end-time">
+        <br><br>
+        <input type="submit" value="Send" id="submit">
+      </form>
   </div>
   </body>
 </html>
